@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <article class="header-article">
+        <h1>Seu Carrinho de Compras</h1>
+        <p>Aqui estão os itens que você adicionou ao seu carrinho:</p>
+    </article>
+
+    <section class="cart-controls">
+        <button class="btn" onclick="lixeira()">Esvaziar carrinho</button>
+    </section>
+
+    <section class="cart-section">
+        <h2>Seus Itens</h2>
+        <ul id="itensCarrinho"></ul>
+        <div class="total-row"><strong>Total: R$ <span id="totalCompra">0.00</span></strong></div>
+    </section>
+
+    <section class="actions-section">
+        <div class="actions"><button class="btn" onclick="window.location.href='index.html'">Voltar para o menu</button>
+        <button class="btn" onclick="checkout()">Finalizar compra</button>
+    </div>
+    </section>
+    <script src="script.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', exibirCarrinho);</script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Menu Dash</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <article class="header-article">
+        <h1>Bem-vindo ao Cyber Menu Dash!</h1>
+        <p>Este é o seu painel de controle para acessar as funcionalidades do Cyber Menu.</p>
+    </article>
+
+    <section class="menu-section">
+        <h2>Escolha um café</h2>
+        <div class="topbar">
+            <a class="cart-link" href="carrinho.html">Ver carrinho</a>
+            <div id="cartCount" class="cart-count">0</div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div id="cafes">
+        <div class="product">
+            <img src="cafe1.jpg" alt="Café Expresso">
+            <div>Café Expresso</div>
+            <div class="price">R$ 6.00</div>
+            <button onclick="addToCart('cafe1','Café Expresso','cafe1.jpg',6.00)">Adicionar</button>
+        </div>
+        <div class="product">
+            <img src="cafe2.webp" alt="Café Americano">
+            <div>Café Americano</div>
+            <div class="price">R$ 5.50</div>
+            <button onclick="addToCart('cafe2','Café Americano','cafe2.webp',5.50)">Adicionar</button>
+        </div>
+        <div class="product">
+            <img src="cafe3.jpg" alt="Café Latte">
+            <div>Café Latte</div>
+            <div class="price">R$ 7.00</div>
+            <button onclick="addToCart('cafe3','Café Latte','cafe3.jpg',7.00)">Adicionar</button>
+        </div>
+        <div class="product">
+            <img src="cafe4.jpg" alt="Café Cappuccino">
+            <div>Café Cappuccino</div>
+            <div class="price">R$ 7.50</div>
+            <button onclick="addToCart('cafe4','Café Cappuccino','cafe4.jpg',7.50)">Adicionar</button>
+        </div>
+        <div class="product">
+            <img src="cafe5.jpg" alt="Café Mocha">
+            <div>Café Mocha</div>
+            <div class="price">R$ 8.00</div>
+            <button onclick="addToCart('cafe5','Café Mocha','cafe5.jpg',8.00)">Adicionar</button>
+        </div>
+        <div class="product">
+            <img src="cafe6.avif" alt="Café Macchiato">
+            <div>Café Macchiato</div>
+            <div class="price">R$ 6.50</div>
+            <button onclick="addToCart('cafe6','Café Macchiato','cafe6.avif',6.50)">Adicionar</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script>
+        function Painel() {
+            alert("Direcionando para o carrinho de compras!");
+            window.location.href = "carrinho.html";
+        }
+
+        // Valores iniciais (nomes dos cafés)
+        localStorage.setItem("cafe1", "Café Expresso");
+        localStorage.setItem("cafe2", "Café Americano");
+        localStorage.setItem("cafe3", "Café Latte");
+        localStorage.setItem("cafe4", "Café Cappuccino");
+        localStorage.setItem("cafe5", "Café Mocha");
+        localStorage.setItem("cafe6", "Café Macchiato");
+
+        // atualização rápida local (script.js já define funções)
+        updateCartCount();
+    </script>
+    </div>
+</body>
+</html>
